@@ -1,0 +1,117 @@
+AULA 8 - FENERICK MQL5:
+
+
+//+------------------------------------------------------------------+
+//|                                            CruazmentoMediaEA.mq5 |
+//|                                                    diegoPaladino |
+//|                                             https://www.mql5.com |
+//+------------------------------------------------------------------+
+#property copyright "diegoPaladino"
+#property link      "https://www.mql5.com"
+#property version   "1.00"
+
+input int PeriodoLongo = 20; //Período Média Longa
+input int PeriodoCurto = 10; //Período Média Curta
+input double SL = 3.0; // Stop Loss
+input double TP = 5.0; //Take Profit
+input double   Volume = 5; // Volume
+input string inicio = "09:05" // Horário de início (entradas)
+input string termino = "17:00" // Horário de término (entradas)
+input string fechamento = "17:30" // Horário de fechamento (posições)
+
+int handlemedialonga, handlemediacurta;
+
+MqlDateTime  , horario_termino, horario_fechamento;
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+  {
+//---
+   handlemediacurta = iCustom(_Symbol,_Period, "MediaMovel", PeriodoCurto);
+   handlemedialonga = iCustom(_Symbol,_Period, "MediaMovel", PeriodoLongo);
+   
+   if(handlemediacurta == INVALID_HANDLE || handlemedialonga == INVALID_HANDLE)
+   {   
+      Print("Erro da criação dos manipuladores");
+      return INIT_FAILED;
+   }  
+   
+   
+   if(PeriodoLongo <= PeriodoCurto)
+   {
+      Print("Parâmetros de média incorretos");
+      return INIT_FAILED;
+   }
+//---
+
+   TimeToStruct(StringToTime(inicio), horario_inicio);
+   TimeToStruct(StringToTime(termino), horario_termino);
+   TimeToStruct(StringToTime(fechamento), horario_fechamento);
+   
+   return(INIT_SUCCEEDED);
+  }
+//+------------------------------------------------------------------+
+//| Expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+  {
+//---
+   printf("Dinit reason: ", reason);
+  }
+//+------------------------------------------------------------------+
+//| Expert tick function                                             |
+//+------------------------------------------------------------------+
+void OnTick()
+  {
+//---
+   
+   if(HorarioEntrada())
+   {
+      if(SemPosicao())
+      {
+         int resultado_cruzamento = Cruzamento();
+         if(resultado_cruzamento ==1)
+            Compra();
+         if(resultado_cruzamento ==-1)
+            Venda();
+      }
+   }
+   
+   if(HorarioFechamento())
+   {
+      if(!SemPosicao())
+         Fechar();
+   }
+   
+  }
+bool HorarioEntrada()
+{
+   return true;
+}
+bool HorarioFechamento()
+{
+   return true;
+}
+void Compra()
+{
+   
+}
+void Venda()
+{
+   
+}
+void Fechar()
+{
+   
+}
+bool SemPosicao()`
+{
+   return true;
+}
+int Cruzamento()
+{
+   return 0;
+}
+//+------------------------------------------------------------------+
