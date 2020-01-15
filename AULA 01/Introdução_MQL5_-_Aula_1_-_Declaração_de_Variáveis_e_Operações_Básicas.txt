@@ -1,9 +1,9 @@
 //+------------------------------------------------------------------+
 //| Introdução_MQL5_-_Aula_1_-_Declaração_de_Variáveis_e_Operações_Básicas.mq5
-//| Copyright diegoPaladino
+//| Copyright Copyright 2019, MetaQuotes Software Corp.
 //| https://www.mql5.com
 //+------------------------------------------------------------------+
-#property copyright "diegoPaladino"
+#property copyright "Copyright 2019, MetaQuotes Software Corp."
 #property link      "https://www.mql5.com"
 #property version   "1.00"
 //+------------------------------------------------------------------+
@@ -18,21 +18,36 @@ void OnStart()
    bool booleano;
    
    inteiro = 5;
-   flutuante = 2.3;
+   flutuante = 3.2;
    palavra = "Olá Mundo!";
-   booleano =  true;
+   booleano = true;
    booleano = false;
    
+   //1º EXEMPLO DADO NO INÍCIO DA AULA
+   /*   
    double a, b, c;
    a = 3.2;
    b = 6.4;
    c = a / b;
    
+   // esses dois itens vão abaixo (ao menos no exemplo, das declarações de "a, b, c"
    int d;
+   Print(d);
+   //---
+   */
+   //---
    
-   d = a/b;
+   //2º EXEMPLO DADO
    
-   Print (c);
-   Print (d);
+   int a, b, c, d;
+   a = 5;
+   b = 2;
+   c = a/b;
+   d = a % b;
+   
+   
+   Print(c);
+   Print(d);
   }
 //+------------------------------------------------------------------+
+ 
