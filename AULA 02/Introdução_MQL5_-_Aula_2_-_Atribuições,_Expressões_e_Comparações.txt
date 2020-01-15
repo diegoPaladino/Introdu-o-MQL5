@@ -1,0 +1,139 @@
+//+------------------------------------------------------------------+
+//| Introdução_MQL5_-_Aula_1_-_Declaração_de_Variáveis_e_Operações_Básicas.mq5
+//| Copyright Copyright 2019, MetaQuotes Software Corp.
+//| https://www.mql5.com
+//+------------------------------------------------------------------+
+#property copyright "Copyright 2019, MetaQuotes Software Corp."
+#property link      "https://www.mql5.com"
+#property version   "1.00"
+//+------------------------------------------------------------------+
+//| Script program start function                                    |
+//+------------------------------------------------------------------+
+void OnStart()
+  {
+//---
+   /*
+   int inteiro;
+   double flutuante;
+   string palavra;
+   bool booleano;
+   
+   inteiro = 5;
+   flutuante = 3.2;
+   palavra = "Olá Mundo!";
+   booleano = true;
+   booleano = false;
+   */
+   
+   //1º EXEMPLO DADO NO INÍCIO DA AULA
+   /*   
+   double a, b, c;
+   a = 3.2;
+   b = 6.4;
+   c = a / b;
+   
+   // esses dois itens vão abaixo (ao menos no exemplo, das declarações de "a, b, c"
+   int d;
+   Print(d);
+   //---
+   */
+   //---
+   
+   //2º EXEMPLO DADO - 2ª AULA
+   /*
+   int a, b, c, d;
+   a = 5;
+   b = 2;
+   c = a/b;
+   d = a % b;
+   
+   
+   Print(c);
+   Print(d);
+   */
+   //---
+   
+   //3º EXEMPLO DADO - 2º AULA
+   /*
+   int a, b;
+   a = 14;
+   b = 20;
+   b = a + b;
+   //podem também ser feitas da seguinte forma:
+   b += a;
+   b -= a;
+   b *= a;
+   b /= a;
+   b %= a;
+   */
+   
+   // exemplo dado no decorrer da aula 3
+   /*
+   double a, b, c, d;
+   a = 2;
+   b = 3;
+   d = 5;
+   c = (a + b) * d;
+   Print(c);
+   */
+   
+   // aos 5:33 da aula 2 elimina-se todo esse código + as linhas 16-25
+   /*
+   
+   double abertura, fechamento, maxima, minima;
+   abertura = 10.5;
+   fechamento = 10.2;
+   maxima = 11.0;
+   minima = 10.0;
+   
+   double resultado = (abertura + fechamento + maxima + minima) / 4;
+   resultado = (maxima + minima + 2*fechamento)/4;
+   
+   Print(resultado);
+   */
+   
+   //alguns exemplos de combinações de resultados
+   /*
+   int a, b;
+   bool resultado;
+   
+   a = 5;
+   b = 3;
+   
+   //seis possíveis combinações de 'resultados'
+   resultado = a == b;
+   resultado = a != b;
+   resultado = a <= b;
+   resultado = a >= b;
+   resultado = a < b;
+   resultado = a > b;
+   
+   Print(resultado);
+   */
+   
+   // por fim (à aula 2) é dado um exemplo:
+   double abertura, fechamento, maxima, minima;
+   double abertura2,fechamento2, maxima2, minima2;
+   
+   abertura = 10.0;
+   fechamento = 10.5;
+   maxima = 11.0;
+   minima = 9.8;
+   
+   abertura2 = 10.5;
+   fechamento2 = 12.0;
+   maxima2 = 12.4;
+   minima2 = 10.4;
+   
+   double media, media2;
+   
+   media = (abertura + fechamento + maxima + minima) / 4;
+   media2 = (abertura2 + fechamento2 + maxima2 + minima2) / 4;
+   
+   bool resultado = media > media2;
+   
+   Print(resultado);
+   
+  }
+//+------------------------------------------------------------------+
+ 
