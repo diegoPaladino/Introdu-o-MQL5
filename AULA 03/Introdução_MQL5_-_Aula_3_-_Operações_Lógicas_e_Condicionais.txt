@@ -1,0 +1,94 @@
+//+------------------------------------------------------------------+
+//|  Introdução_MQL5_-_Aula_3_-_Operações_Lógicas_e_Condicionais.mq5 |
+//|                                                    diegoPaladino |
+//|                                             https://www.mql5.com |
+//+------------------------------------------------------------------+
+#property copyright "diegoPaladino"
+#property link      "https://www.mql5.com"
+#property version   "1.00"
+//+------------------------------------------------------------------+
+//| Script program start function                                    |
+//+------------------------------------------------------------------+
+void OnStart()
+  {
+//---
+   //Declaração de variáveis
+   int a, b, c, d;
+   a = 13;
+   b = 12;
+   c = 8;
+   d = 25;
+   
+   //explanação de OPERADORES LÓGICOS
+   //bool resultado = a < b && c < d;  //"&&" representa lógica "and"
+   //bool resultado = a < b || c < d;    //"||" representa lógica "or"
+   
+   /*
+   bool resultado_parcial1, resultado_parcial2;
+   resultado_parcial1 = a == b;
+   resultado_parcial2 = c == d;
+   bool resultado = resultado_parcial1 && resultado_parcial2;
+   Print(resultado_parcial1);
+   Print(resultado_parcial2);
+   Print (resultado);
+   */
+   
+   //Explicação de lógicas "if" e "else"
+   /*
+   if(a == b)
+     {
+      Print("A é igual a B!");
+     }
+   else
+     {
+      Print("A não é igual a B!");
+     }
+     */
+     /*
+   bool resultado_parcial1, resultado_parcial2;
+   resultado_parcial1 = a == b;
+   resultado_parcial2 = c == d;
+   bool resultado = resultado_parcial1 && resultado_parcial2;
+   
+   if(!resultado)
+     {
+      Print("Resultado é verdadeiro!");
+     }
+   else
+     {
+      Print("Resultado não é verdadeiro!");
+     }
+     */
+     
+     //Ao fim da aula exemplo usado da AULA 02
+     
+   double abertura, fechamento, maxima, minima;
+   double abertura2,fechamento2, maxima2, minima2;
+   
+   abertura = 10.0;
+   fechamento = 10.5;
+   maxima = 11.0;
+   minima = 9.8;
+   
+   abertura2 = 10.5;
+   fechamento2 = 12.0;
+   maxima2 = 12.4;
+   minima2 = 10.4;
+   
+   double media, media2;
+   
+   media = (abertura + fechamento + maxima + minima) / 4;
+   media2 = (abertura2 + fechamento2 + maxima2 + minima2) / 4;
+   
+   bool resultado = media > media2;
+   
+      if(resultado)
+      {
+         Print("Compra!");
+      }
+      else
+      {
+         Print("Venda!");
+      }
+  }
+//+------------------------------------------------------------------+
