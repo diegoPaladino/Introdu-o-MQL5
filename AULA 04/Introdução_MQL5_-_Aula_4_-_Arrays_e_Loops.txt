@@ -1,0 +1,76 @@
+//+------------------------------------------------------------------+
+//|                    Introdução_MQL5_-_Aula_4_-_Arrays_e_Loops.mq5 |
+//|                        Copyright 2019, MetaQuotes Software Corp. |
+//|                                             https://www.mql5.com |
+//+------------------------------------------------------------------+
+#property copyright "Copyright 2019, MetaQuotes Software Corp."
+#property link      "https://www.mql5.com"
+#property version   "1.00"
+//+------------------------------------------------------------------+
+//| Script program start function                                    |
+//+------------------------------------------------------------------+
+void OnStart()
+  {
+//---
+   //EXPLICAÇÃO DE ARRAY
+   /*
+   int inteiro;
+   int inteiro_array[3];
+   
+   inteiro = 1;
+   inteiro_array[0] = 1;
+   inteiro_array[1] = 2;
+   inteiro_array[2] = 3;
+   */
+   
+   // EXPLICAÇÃO DE LOOPS 'WHILE'
+   /*
+   int a, b;
+   a = 1;
+   b = 5;
+   
+   while(a < b)
+     {
+      a++; //esta forma de digitar o " ++; " após a variável é uma forma mais simples de digitar " a+=1; "
+      Print(a);
+     }
+     */
+     
+     // EXPLICAÇÃO DE LOOPS 'FOR'
+     /*
+     for(int i=0;i<5;i++)
+       {
+        
+       }
+   */
+   // EXPLICAÇÃO 'PRÁTICA' DO LAÇO 'FOR':
+   double abertura[3], fechamento[3], maxima[3], minima[3];
+   
+   abertura[0] = 10.0;
+   fechamento [0] = 10.5;
+   maxima [0] = 11.0;
+   minima [0] = 9.8;
+   
+   abertura[1] = 10.5;
+   fechamento [1] = 10.9;
+   maxima [1] = 11.4;
+   minima [1] = 10.1;
+   
+   abertura[2] = 10.9;
+   fechamento [2] = 11.4;
+   maxima [2] = 11.4;
+   minima [2] = 10.6;
+   
+   double media = 0;
+   
+   for(int i=0;i<3;i++)
+     {
+      media += (abertura[i] + fechamento[i] + maxima[i] + minima[i]) / 4;
+     }
+     
+     media /= 3;
+     
+     Print(media);
+   
+  }
+//+------------------------------------------------------------------+
