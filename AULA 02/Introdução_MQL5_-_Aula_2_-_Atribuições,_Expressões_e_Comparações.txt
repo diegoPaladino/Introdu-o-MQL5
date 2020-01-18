@@ -1,5 +1,5 @@
 //+------------------------------------------------------------------+
-//| Introdução_MQL5_-_Aula_1_-_Declaração_de_Variáveis_e_Operações_Básicas.mq5
+//| Introdução_MQL5_-_Aula_2_-_Declaração_de_Variáveis_e_Operações_Básicas.mq5
 //| Copyright Copyright 2019, MetaQuotes Software Corp.
 //| https://www.mql5.com
 //+------------------------------------------------------------------+
