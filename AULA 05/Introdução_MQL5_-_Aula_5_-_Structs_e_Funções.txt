@@ -1,0 +1,102 @@
+//+------------------------------------------------------------------+
+//|                 Introdução_MQL5_-_Aula_5_-_Structs_e_Funções.mq5 |
+//|                        Copyright 2019, MetaQuotes Software Corp. |
+//|                                             https://www.mql5.com |
+//+------------------------------------------------------------------+
+#property copyright "Copyright 2019, MetaQuotes Software Corp."
+#property link      "https://www.mql5.com"
+#property version   "1.00"
+//+------------------------------------------------------------------+
+//| Script program start function                                    |
+//+------------------------------------------------------------------+
+//parte da explicação da aula
+   /*
+   struct horario
+     {
+      int hora;
+      int minuto;
+      int segundo;
+     };
+     
+     int soma(int valor1, int valor2)
+     {
+     int resultado;
+     resultado = valor1 + valor2;
+     return resultado;
+     */
+     
+     struct precos
+     {
+     double abertura;
+     double fechamento;
+     double maxima;
+     double minima;
+     
+     };
+     
+     double media(precos &candle)
+     {
+      return(candle.abertura + candle.fechamento + candle.maxima + candle.minima)/4;
+     }
+
+void OnStart()
+  {
+//---
+   //parte da explicação da aula
+   /*
+   horario inicio;
+   
+   inicio.hora = 10;
+   inicio.minuto = 5;
+   inicio.segundo = 0;
+   */
+   
+   //parte da explicação da aula
+   /*
+   int a, b, c;
+   
+   a = 1;
+   b = 4;
+   
+   c = soma(a,b);
+   
+   int d, e, f;
+   
+   d = 10;
+   e = 23;
+   
+   f = soma(d,e);
+   
+   Print(c);
+   Print(f);
+   */
+   
+   precos ultimos_candles[3];
+   
+   ultimos_candles[0].abertura = 10.0;
+   ultimos_candles[0].fechamento = 10.5;
+   ultimos_candles[0].maxima = 11.0;
+   ultimos_candles[0].minima = 9.8;
+   
+   ultimos_candles[1].abertura = 10.5;
+   ultimos_candles[1].fechamento = 10.9;
+   ultimos_candles[1].maxima = 11.4;
+   ultimos_candles[1].minima = 10.1;
+   
+   ultimos_candles[2].abertura = 10.9;
+   ultimos_candles[2].fechamento = 10.4;
+   ultimos_candles[2].maxima = 11.4;
+   ultimos_candles[2].minima = 10.6;
+   
+   double media_3_periodos = 0;
+   
+   for(int i=0;i<3;i++)
+     {
+      media_3_periodos += media(ultimos_candles[i]);
+     }
+     
+     media_3_periodos /= 3;
+     
+     Print(media_3_periodos);
+  }
+//+------------------------------------------------------------------+
